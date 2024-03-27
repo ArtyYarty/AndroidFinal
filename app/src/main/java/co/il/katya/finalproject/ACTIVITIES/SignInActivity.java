@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +45,16 @@ public class SignInActivity extends AppCompatActivity {
         cbRemember = findViewById(R.id.cbRemember);
         btnSignIn2 = findViewById(R.id.btnRegister);
         tvSignUpPage = findViewById(R.id.tvSignUpPage);
+
+        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+        String checkBox = preferences.getString("remember", "");
+        if(checkBox.equals("true")) {
+            Intent intent = new Intent(SignInActivity.this, MainMenuActivity.class);
+            startActivity(intent);
+        }
+        else if(checkBox.equals("false")){
+            Toast.makeText(SignInActivity.this, "Please Sign In", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void setListeners() {
@@ -68,28 +79,29 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+        cbRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(compoundButton.isChecked()) {
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "true");
+                    editor.apply();
+                    Toast.makeText(SignInActivity.this, "Checked", Toast.LENGTH_SHORT).show();
+                    //If checkbox is true will run this activity
+                }
+
+                else if(!compoundButton.isChecked()) {
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "false");
+                    editor.apply();
+                    Toast.makeText(SignInActivity.this, "Unchecked", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        SharedPreferences sh = getSharedPreferences("Login", MODE_PRIVATE);
-        String email = sh.getString("name", "");
-        String password = sh.getString("password", "");
 
-        etEmail.setText(email);
-        etPassword.setText(password);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if(cbRemember.isChecked()){
-            SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
-            SharedPreferences.Editor myEdit = sharedPreferences.edit();
-            myEdit.putString("name", etEmail.getText().toString());
-            myEdit.putString("password", etPassword.getText().toString());
-            myEdit.apply();
-        }
-    }
 }
