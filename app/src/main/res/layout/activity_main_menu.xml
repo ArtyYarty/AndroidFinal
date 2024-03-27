@@ -4,6 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DDC8C4"
     tools:context=".ACTIVITIES.MainMenuActivity">
 
+    <Button
+        android:id="@+id/btnMyFridge"
+        android:layout_width="194dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#896A67"
+        android:text="My Fridge"
+        android:textColor="#EFF9F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <Button
+        android:id="@+id/btnRecipes"
+        android:layout_width="194dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#896A67"
+        android:text="New Recipes"
+        android:textColor="#EFF9F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <Button
+        android:id="@+id/btnSurprise"
+        android:layout_width="194dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#896A67"
+        android:text="Surprise Me"
+        android:textColor="#EFF9F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/btnNewAllergy"
+        android:layout_width="194dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#896A67"
+        android:text="Add New Allergy"
+        android:textColor="#EFF9F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="286dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#13070C"
+        android:text="Log Out"
+        android:textColor="#EFF9F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
 </androidx.constraintlayout.widget.ConstraintLayout>
