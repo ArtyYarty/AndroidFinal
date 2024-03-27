@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295463540659",
+    "project_id": "androidproject-be096",
+    "storage_bucket": "androidproject-be096.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295463540659:android:5a95572f4a0cd2e628ddc6",
+        "android_client_info": {
+          "package_name": "co.il.katya.finalproject.REPOSITORY"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIS1s1kUl0y9soDXHEvuutgyl4FY9VM94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
