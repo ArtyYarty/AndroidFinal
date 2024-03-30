@@ -19,7 +19,8 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView tvAppName;
     private TextView tvSignInPage;
 
-    private EditText etFullName;
+    private EditText etFirstName;
+    private EditText etLastName;
     private EditText etEmail;
     private EditText etPass;
     private EditText etPassRepeat;
@@ -41,7 +42,8 @@ public class SignUpActivity extends AppCompatActivity {
         tvWelcome = findViewById(R.id.tvWelcome);
         tvAppName = findViewById(R.id.tvAppName);
         tvSignInPage = findViewById(R.id.tvSignInPage);
-        etFullName = findViewById(R.id.etFullName);
+        etFirstName = findViewById(R.id.etFirstName);
+        etLastName = findViewById(R.id.etLastName);
         etEmail = findViewById(R.id.etEmail);
         etPass = findViewById(R.id.etPassword);
         etPassRepeat = findViewById(R.id.etPassRepeat);
@@ -78,8 +80,13 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     void checkDataEntered() {
-        if (isEmpty(etFullName)) {
-            Toast t = Toast.makeText(this, "You must enter full name to register!", Toast.LENGTH_SHORT);
+        if (isEmpty(etFirstName)) {
+            Toast t = Toast.makeText(this, "You must enter first name to register!", Toast.LENGTH_SHORT);
+            t.show();
+        }
+
+        if (isEmpty(etLastName)) {
+            Toast t = Toast.makeText(this, "You must enter last name to register!", Toast.LENGTH_SHORT);
             t.show();
         }
 
