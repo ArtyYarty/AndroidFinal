@@ -24,7 +24,7 @@
         tools:textStyle="bold" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/plus_button" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rvFoodItems"
         android:layout_width="326dp"
         android:layout_height="424dp"
         app:layout_constraintBottom_toBottomOf="parent"

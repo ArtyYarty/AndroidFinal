@@ -36,7 +36,9 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation(project(mapOf("path" to ":MODEL")))
     implementation(project(mapOf("path" to ":MODEL")))
+    implementation(project(mapOf("path" to ":VIEWMODEL")))
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("com.google.android.gms:play-services-tasks:18.1.0")
 }
