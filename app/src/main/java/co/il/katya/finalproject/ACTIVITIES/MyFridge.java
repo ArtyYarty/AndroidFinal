@@ -92,6 +92,7 @@ public class MyFridge extends AppCompatActivity {
 
     private void initViews() {
         rvFoodItems = findViewById(R.id.rvFoodItems);
+        fabAdd = findViewById(R.id.fabAdd);
 
         addItems();
     }

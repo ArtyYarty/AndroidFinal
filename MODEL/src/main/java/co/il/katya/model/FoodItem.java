@@ -8,14 +8,19 @@ public class FoodItem extends BaseEntity implements Serializable {
 
     private long bestUseBefore;
 
-    private boolean isConsumed;
+    private String category;
+
+    //private boolean isConsumed;
+
+    private String content;
 
 
-
-    public FoodItem(String name, long bestUseBefore, boolean isConsumed){
+    public FoodItem() {}
+    public FoodItem(String name, long bestUseBefore, String category, String content){
         this.name = name;
         this.bestUseBefore = bestUseBefore;
-        this.isConsumed = isConsumed;
+        this.category = category;
+        this.content = content;
     }
 
 
@@ -29,7 +34,23 @@ public class FoodItem extends BaseEntity implements Serializable {
 
     public void setBestUseBefore(long bestUseBefore) {this.bestUseBefore = bestUseBefore;}
 
-    public boolean isConsumed() {return isConsumed;}
+//    public boolean isConsumed() {return isConsumed;}
+//
+//    public void setConsumed(boolean consumed) {isConsumed = consumed;}
 
-    public void setConsumed(boolean consumed) {isConsumed = consumed;}
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

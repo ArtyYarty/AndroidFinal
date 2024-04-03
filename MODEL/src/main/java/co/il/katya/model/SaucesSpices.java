@@ -4,8 +4,8 @@ public class SaucesSpices extends FoodItem{
 
     private int grams;
     private boolean isSpicy;
-    public SaucesSpices(String name, long bestUseBefore, boolean isConsumed, int grams, boolean isSpicy) {
-        super(name, bestUseBefore, isConsumed);
+    public SaucesSpices(String name, long bestUseBefore, String category, String content, int grams, boolean isSpicy) {
+        super(name, bestUseBefore, category, content);
         this.grams = grams;
         this.isSpicy = isSpicy;
     }

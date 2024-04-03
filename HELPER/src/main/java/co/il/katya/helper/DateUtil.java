@@ -1,4 +1,4 @@
-package co.il.katya.model;
+package co.il.katya.helper;
 
 import android.os.Build;
 

@@ -5,8 +5,8 @@ public class Meat extends FoodItem{
     private int amount;
     private String type;
 
-    public Meat(String name, long bestUseBefore, boolean isConsumed, int amount, String type) {
-        super(name, bestUseBefore, isConsumed);
+    public Meat(String name, long bestUseBefore, String category, String content, int amount, String type) {
+        super(name, bestUseBefore, category, content);
         this.amount = amount;
         this.type = type;
     }

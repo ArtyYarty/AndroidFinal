@@ -6,8 +6,8 @@ public class Drinks extends FoodItem{
     private boolean isAlcoholic;
     private boolean isJuice;
 
-    public Drinks(String name, long bestUseBefore, boolean isConsumed, int ml, boolean isAlcoholic, boolean isJuice) {
-        super(name, bestUseBefore, isConsumed);
+    public Drinks(String name, long bestUseBefore, String category, String content, int ml, boolean isAlcoholic, boolean isJuice) {
+        super(name, bestUseBefore, category, content);
         this.ml = ml;
         this.isAlcoholic = isAlcoholic;
         this.isJuice = isJuice;

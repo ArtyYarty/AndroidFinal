@@ -52,6 +52,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/btnSkipSignIn"
+        android:layout_width="285dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#896A67"
+        android:text="Skip Sign In"
+        android:textColor="#EFF9F0"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <Button
         android:id="@+id/btnSignUp"
         android:layout_width="285dp"
         android:layout_height="65dp"

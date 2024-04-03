@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSignIn;
     private Button btnSignUp;
 
+    private Button btnSkipSignIn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         tvAppName = findViewById(R.id.tvAppName);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignUp = findViewById(R.id.btnSignUp);
+        btnSkipSignIn = findViewById(R.id.btnSkipSignIn);
     }
 
     private void setListeners() {
@@ -52,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
                 startActivity(intent);;
+            }
+        });
+
+        btnSkipSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MainMenuActivity.class);
+                startActivity(intent);
             }
         });
 

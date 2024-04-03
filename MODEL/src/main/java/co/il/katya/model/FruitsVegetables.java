@@ -3,8 +3,8 @@ package co.il.katya.model;
 public class FruitsVegetables extends FoodItem{
     private int amount;
 
-    public FruitsVegetables(String name, long bestUseBefore, boolean isConsumed, int amount) {
-        super(name, bestUseBefore, isConsumed);
+    public FruitsVegetables(String name, long bestUseBefore, String category, String content, int amount) {
+        super(name, bestUseBefore, category, content);
         this.amount = amount;
     }
 

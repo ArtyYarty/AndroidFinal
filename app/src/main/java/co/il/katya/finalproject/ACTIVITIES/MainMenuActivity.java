@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import co.il.katya.finalproject.R;
 
@@ -49,6 +50,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Shows list of recipes with available items from fridge
+                Toast.makeText(MainMenuActivity.this, "Recipes clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -56,6 +58,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Make an alert dialog that shows a random pop up of a surprise recipe (With picture)
+                Toast.makeText(MainMenuActivity.this, "Surprise clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -63,6 +66,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //New pop up alert that gives the option to add a new allergy.
+                Toast.makeText(MainMenuActivity.this, "Allergy clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -72,7 +76,6 @@ public class MainMenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainMenuActivity.this, SignInActivity.class);
                 intent.putExtra("checkboxState", false);
                 startActivity(intent);
-
             }
         });
     }
